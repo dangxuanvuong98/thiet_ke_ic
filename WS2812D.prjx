@@ -42,19 +42,19 @@ CURREV=1
 ENDLIST
 LIST FileManager
 VALUE "<project>\designer\impl1\WS2812D.adb,adb"
-STATE="utd"
-TIME="1612722104"
+STATE="ood"
+TIME="1612808125"
 SIZE="78848"
 ENDFILE
 VALUE "<project>\designer\impl1\WS2812D.ide_des,ide_des"
 STATE="utd"
-TIME="1612722104"
+TIME="1612808125"
 SIZE="1011"
 ENDFILE
 VALUE "<project>\designer\impl1\WS2812D.pdb,pdb"
 STATE="ood"
-TIME="1612719395"
-SIZE="40317"
+TIME="1612862848"
+SIZE="40779"
 ENDFILE
 VALUE "<project>\designer\impl1\WS2812D_ba.sdf,ba_sdf"
 STATE="ood"
@@ -68,13 +68,13 @@ SIZE="18247"
 ENDFILE
 VALUE "<project>\designer\impl1\WS2812D_compile_log.rpt,log"
 STATE="utd"
-TIME="1612720582"
-SIZE="8275"
+TIME="1612862622"
+SIZE="8360"
 ENDFILE
 VALUE "<project>\designer\impl1\WS2812D_floorplan_log.rpt,log"
 STATE="utd"
-TIME="1612726511"
-SIZE="370"
+TIME="1612808127"
+SIZE="901"
 ENDFILE
 VALUE "<project>\designer\impl1\WS2812D_fp\projectData\WS2812D.pdb,pdb"
 STATE="utd"
@@ -88,7 +88,7 @@ SIZE="2451"
 ENDFILE
 VALUE "<project>\hdl\CLK_800KHZ.vhd,hdl"
 STATE="utd"
-TIME="1612718647"
+TIME="1612863738"
 SIZE="1343"
 ENDFILE
 VALUE "<project>\hdl\ROM.vhd,hdl"
@@ -98,18 +98,18 @@ SIZE="1225"
 ENDFILE
 VALUE "<project>\hdl\RSHF_REG_8BIT.vhd,hdl"
 STATE="utd"
-TIME="1612719199"
-SIZE="1523"
+TIME="1612858615"
+SIZE="1317"
 ENDFILE
 VALUE "<project>\hdl\WS2812D.vhd,hdl"
 STATE="utd"
-TIME="1612719118"
+TIME="1612859958"
 SIZE="1816"
 ENDFILE
 VALUE "<project>\synthesis\WS2812D.edn,syn_edn"
-STATE="utd"
-TIME="1612720572"
-SIZE="39584"
+STATE="ood"
+TIME="1612862592"
+SIZE="42659"
 ENDFILE
 VALUE "<project>\synthesis\WS2812D.so,so"
 STATE="utd"
@@ -117,8 +117,8 @@ TIME="1612720572"
 SIZE="244"
 ENDFILE
 VALUE "<project>\synthesis\WS2812D_sdc.sdc,syn_sdc"
-STATE="utd"
-TIME="1612720572"
+STATE="ood"
+TIME="1612862592"
 SIZE="482"
 ENDFILE
 VALUE "<project>\synthesis\WS2812D_syn.prj,prj"
@@ -130,26 +130,6 @@ ENDLIST
 LIST UsedFile
 ENDLIST
 LIST NewModulesInfo
-LIST "WS2812D::work"
-FILE "<project>\hdl\WS2812D.vhd,hdl"
-LIST ProjectState5.1
-LIST Impl1
-LiberoState=Post_Synthesis
-ideSYNTHESIS(<project>\synthesis\WS2812D.edn,syn_edn)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-LIST PinReports
-VALUE "<project>\designer\impl1\WS2812D_report_pin_byname.txt,log"
-VALUE "<project>\designer\impl1\WS2812D_report_pin_bynumber.txt,log"
-ENDLIST
-ENDLIST
 ENDLIST
 LIST AssociatedStimulus
 ENDLIST
@@ -220,8 +200,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -254,19 +234,6 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
-LIST "WS2812D::work"
-LIST Impl1
-LiberoState=Post_Synthesis
-ideSYNTHESIS(<project>\synthesis\WS2812D.edn,syn_edn)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -285,7 +252,9 @@ ReportsCurrentItem;Compile:WS2812D_compile_log.rpt
 StartPage;StartPage;0
 HDL;hdl\WS2812D.vhd;0
 HDL;hdl\RSHF_REG_8BIT.vhd;0
-ACTIVEVIEW;Reports
+HDL;hdl\CLK_800KHZ.vhd;0
+HDL;hdl\ROM.vhd;0
+ACTIVEVIEW;hdl\CLK_800KHZ.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "CLK_800KHZ::work","hdl\CLK_800KHZ.vhd","FALSE","FALSE"
@@ -295,9 +264,9 @@ ENDLIST
 LIST "RSHF_REG_8BIT::work","hdl\RSHF_REG_8BIT.vhd","FALSE","FALSE"
 ENDLIST
 LIST "WS2812D::work","hdl\WS2812D.vhd","FALSE","FALSE"
-SUBBLOCK "CLK_800KHZ::work","hdl\CLK_800KHZ.vhd","FALSE","FALSE"
 SUBBLOCK "ROM::work","hdl\ROM.vhd","FALSE","FALSE"
 SUBBLOCK "RSHF_REG_8BIT::work","hdl\RSHF_REG_8BIT.vhd","FALSE","FALSE"
+SUBBLOCK "CLK_800KHZ::work","hdl\CLK_800KHZ.vhd","FALSE","FALSE"
 ENDLIST
 ENDLIST
 LIST ActiveTestBenchList

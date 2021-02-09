@@ -31,24 +31,18 @@ end RSHF_REG_8BIT;
 architecture architecture_RSHF_REG_8BIT of RSHF_REG_8BIT is
 	signal data : std_logic_vector(7 downto 0);
 begin
-    Dout <= data(0);
     process (Clk)
     begin
-        if (rising_edge(ClkData)) then
-            for i in 6 downto 0 loop
-                data(i) <= data(i + 1);
-            end loop;
-            data(7) <= Din;
-        elsif (rising_edge(Clk)) then
+        if (rising_edge(Clk)) then
+            Dout <= data(0);
             for i in 6 downto 0 loop -- shift from the 6-th bit to the 0-th bit
                 data(i) <= data(i + 1);
             end loop;
-            --if (Din /= 'Z') then
-                --data(7) <= Din;
-            --else
-                --data(7) <= data(0);
-            --end if;
-            data(7) <= data(0);
+            if (ClkData = '1') then
+                data(7) <= Din;
+            else
+                data(7) <= data(0);
+            end if;
         end if;
     end process;
 end architecture_RSHF_REG_8BIT;
